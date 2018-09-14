@@ -1,0 +1,294 @@
+/*********************************************
+* Reset
+**********************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*********************************************
+* Element base style
+**********************************************/
+body
+{
+  font-family: "Lato" , san-serf;
+  font-size: 100%;
+  line-height: 1.4;
+  background-color: #fff;
+  color: #777;
+}
+
+img
+{
+  max-width: 100%;
+}
+
+section
+{
+  width: 100%;
+  display: block;
+}
+
+p
+{
+  padding: 5px;
+}
+
+ul
+{
+  list-style: none;
+  display: block;
+  width: 100%;
+}
+
+h2
+{
+  font-size: 1.3em;
+}
+
+header
+{
+  background-color: #000;
+  color: #f5f5f5;
+}
+
+form input
+{
+  border-radius: 0;
+  border: none;
+  outline: none;
+  height: 30px;
+  padding: 0 10px;
+  font-size: .98em;
+}
+
+
+/*********************************************
+* wrapper style
+**********************************************/
+.wrapper{
+  width: 96%;
+  margin: auto;
+  max-width: 1400px;
+}
+
+@media all and (max-width: 768px)
+{
+  .wrapper{
+    width: 98%;
+  }
+}
+
+/*********************************************
+* header style
+**********************************************/
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.header{
+  padding: 20px;
+}
+
+.header form{
+  background-color: #fff;
+}
+
+.header .search-btn{
+  background-color: #128fdc;
+  color: #fff;
+  cursor: pointer;
+  float: right;
+}
+
+.header .search-input{
+  width: 70%;
+}
+
+@media all and (min-width: 769px)
+{
+    
+    .header h2{
+      float: left;
+  }
+
+    .header form{
+    width: 40%;
+    float: right;
+  }
+
+    .header::after{
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+    .header form input:first-child{
+    width: 50%;
+    float: left;
+  }
+
+
+}
+
+/*********************************************
+* main content style
+**********************************************/
+.main-content{
+  margin: 120px 0;
+}
+
+.main-content ul{
+  text-align: center;
+}
+.main-content h4{
+ color: #10405e;
+ letter-spacing: 1.2px;
+}
+.main-content ul li{
+  border: 2px solid #ccc;
+  margin: 10px 0.5%;
+  padding: 0px .5%;
+  background-color: #f5f5f5;
+  text-align: left;
+}
+
+.main-content img{
+  height: 240px;
+}
+
+.photo-frame-title-container{
+  overflow: hidden;
+}
+
+.photo-frame{
+  height: 240px;
+  transition: transform .65s ;
+  text-align: center;
+}
+
+.photo-frame-title-container:hover .photo-frame{
+  transform: scale(1.1);
+}
+
+.photo-description,
+.photo-tags{
+  max-height: 50px;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all .65s;
+  padding: 5px;
+}
+
+.photo-tags{
+  overflow: scroll;
+}
+
+.photo-title a{
+  font-size: .98em; 
+  word-break: keep-all;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.photo-title span{
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+
+/* style use to create collape box */
+.photo-description-container label{
+  padding: 8px;
+  display: inline-block;
+  background-color: #128fdc;
+  color: #fff;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.veiw-more-btn-contanier{
+  text-align: right;
+}
+
+.photo-description-container input{
+ display: none;
+}
+
+.photo-description-container input:checked ~ .veiw-more-btn-contanier  span{
+  display: none;
+}
+.photo-description-container input:checked ~ .veiw-more-btn-contanier label::after{
+  content: "  less description ";
+  display: inline-block;
+}
+
+.photo-description-container input:checked  ~ .photo-description{
+  max-height: 65em;
+}
+
+
+@media all and (min-width: 769px)
+{
+  .main-content{
+    margin: 70px 0;
+  }
+  .main-content ul li{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px .5%;
+    width: 40%;
+  }
+
+  .photo-frame-title-container{
+    position: relative;
+  }
+  .photo-description-container{
+    margin-top: 10px;
+  }
+
+  .photo-frame-title-container:hover .photo-title{
+    opacity: 1;
+  }
+
+  .photo-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0, .5);
+    width: 100%;
+    transition: all .65s ;
+    opacity: 0;
+    color: #fff;
+  }
+
+  .photo-title a{
+    font-size: 12px;
+    color: #fff;  
+  }
+
+}
+
+@media all and (min-width: 1000px)
+{
+  .main-content ul li{
+    width: 32%;
+  }
+
+}
+
+@media all and (min-width: 1600px)
+{
+  .main-content ul li{
+    width: 23.5%;
+  }
+}
+
