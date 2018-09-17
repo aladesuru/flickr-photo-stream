@@ -1,0 +1,12 @@
+App Documentation
+*********************
+Technology use in building the App is  React.js , HTML, CSS , Axios( data fetching library).
+
+The main functionality of the App is to use Flickr API and display the content according to wire-frame given which i did with a little adjustment but functionality and design remain the same as required. All functionality is covered except the scrolling that display more  records.
+
+
+IMPORTANT NOTE:
+1 After cloning the App from github run npm install from the terminal to install all app dependency 
+2 run npm start to serve up the server to run the App.
+3 Due to CORS problem : you will need CORs browser extention to allow cross origin access. 
+
