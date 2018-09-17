@@ -4,6 +4,8 @@ Technology use in building the App is  React.js , HTML, CSS , Axios( data fetchi
 
 The main functionality of the App is to use Flickr API and display the content according to wire-frame given which i did with a little adjustment but functionality and design remain the same as required. All functionality is covered except the scrolling that display more  records.
 
+The layout is responsive , mouse Hover the image would give you access to link to flickr image and author on desktop, while on mobile device is visible.   image description is expandable and tag is scroll able  
+
 
 IMPORTANT NOTE:
 1 After cloning the App from github run npm install from the terminal to install all app dependency 
